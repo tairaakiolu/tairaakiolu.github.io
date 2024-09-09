@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
+
+
+body{
+    margin: 0;  /* remove default margin */
+    text-align: center;
+
+
+}
+
+nav {
+    background-color: #AF8F6F;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    
+  
+}
+
+.contact-link {
+    color: #F1EEDC;
+}
+
+footer {
+    display: flex;
+    background-color: #AF8F6F;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    
+
+
+    
+}
+
+footer svg {
+    position: relative;
+    left: 20px;
+
+}
+
+
+.splash {
+    /*background-color: #dadada; */
+    height: 1000px;
+    background-image: url("../images/background6.jpeg");
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    
+
+}
+
+.splash img {
+    width :400px;
+    position: relative;
+    border-radius: 40%;
+   
+    
+}
+
+.splash h1 , .splash p{
+    font-family:  "Baskervville SC";
+    position: relative;
+    text-align: center;
+  
+
+ 
+} 
+
+.splash p {
+    text-align: center;
+    color:rgb(0, 0, 0);
+    font-size: x-large;
+  
+}   
+
+
+.horizontal {
+
+    border-color: #BC9F8B;
+    
+    
+}
+
+
+.container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px;
+    padding: 20px; 
+    background-image: url("../images/background1.jpeg");
+    background-size: cover;
+
+}
+
+.education, .skills, .leadership, .honors{
+    background-color: #F1EEDC;
+    border: solid 10px;
+    border-color:#B3C8CF;
+    width: 600px;
+    height: 320px;
+    text-align: center;
+    font-family:  "Baskervville SC";
+    margin: 20px;
+    font-weight: bold;
+    
+  
+
+
+    padding: 20px; /* Add some space inside the form */
+    box-sizing: border-box; /* Include padding in the width */
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+  
+   
+
+    text-align: left;
+     
+}
+
+
+
+ 
+
+ h2, h3 {
+    color:  #AF8F6F;
+
+}
+
+.projects h2 {
+    font-family:  "Baskervville SC";
+
+}
+
+
+.skills ul, .education ul , .projects ul{
+    display: grid;
+    gap: 10px; /* extra space between grid */
+    list-style-type: none; /* get rid of default bullet points */
+
+}
+
+a {
+    color:#717171;
+    text-decoration: none; /* removes underline from link */
+    font-size: larger;
+
+}
+
+a:hover {
+    color: palevioletred;  /* change color when you hover */
+  
+}
+.three-col {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Create three equal columns */
+    gap: 20px; /* Space between columns and rows */
+}
+
+
+
+.card{
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px; /* Add some space inside the form */
+    box-sizing: border-box; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+    font-family: "Baskervville SC";
+   
+ 
+}
+
+.card:hover {
+    background-color: #BC9F8B;
+
+}
+.images {
+    width: 100%; 
+    height: auto;
+}
+
+.one-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; 
+    margin: 20px auto; 
+    padding: 40px; /* Add some space inside the form */
+    box-sizing: border-box;
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+    text-align: left;
+    font-family:  "Baskervville SC";
+    background-size: cover;
+    background-image: url("../images/background6.jpeg");
+}
+
+.input-box {
+    margin-bottom: 20px; /* Space between input boxes */
+    position: relative; /* Position relative for the icons */
+}
+
+ .input-box input, .input-box .message {
+    width: 500px;
+    height: 30px;
+    outline: none;
+    border: none;
+
+   
+
+}
+
+.contact {
+    font-family:  "Baskervville SC";
+}
+
+.input-box .message {
+    height: 200px;
+
+}
+
+.input-box .message label {
+    margin-top: 10px;
+}
+
+.input-box .icon {
+    width: 30px; 
+    height: 20px; 
+    fill: #000000; 
+    right: 20px; /* Distance from the right edge */
+    top: 65%; /* Center vertically */
+     transform: translateY(-50%); 
+     position: absolute;
+
+
+  
+  
+   
+}
+
+.input-box input[type="text"]::-webkit-clear-button {
+    display: none; 
+}
+
+
+
+
+
+/* Hover Effects for icons */
+.input-box:hover .icon{
+    border: 5px solid  #AF8F6F;
+    box-shadow: 0 0 40px  #AF8F6F, inset 0 0 40px  #AF8F6F;
+    transition: .5s;
+
+} 
+
+form button {
+    width : 100%;
+    padding :16px 0;
+    font-size: 1rem;
+    background:#AF8F6F;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 25px 0 10px;
+
+}
+
+form button:hover {
+    border: 5px solid  #AF8F6F;
+    box-shadow: 0 0 30px   #AF8F6F, inset 0 0 30px  #AF8F6F;
+
+
+}
+
+footer {
+     padding: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap:10px;
+     text-align: center;
+}
+
+footer svg {
+    margin-right:50px;
+
+  
+
+}
+
+@media (max-width:1200px) {
+    .three-col {
+        grid-template-columns: repeat(3,minmax(0, 1fr));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
