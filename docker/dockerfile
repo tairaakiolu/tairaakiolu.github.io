@@ -1,0 +1,9 @@
+# Use the official Kong image as a base image
+FROM kong:latest
+
+# Optional: Copy a custom Kong configuration file if needed
+# COPY kong.conf /etc/kong/kong.conf
+
+# Set the entrypoint to start Kong with the custom config
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["kong", "start"]
