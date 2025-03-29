@@ -1,0 +1,42 @@
+name: Deploy Kong on Cloud Run
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          project_id: mythic-brook-454917-k6
+
+
+      - name: Authenticate Docker with Google Artifact Registry
+        run: |
+          gcloud auth configure-docker us-central1-docker.pkg.dev
+
+      - name: Build and Push Kong Docker Image
+        run: |
+          docker build -t us-central1-docker.pkg.dev/mythic-brook-454917-k6
+/kong-repo/kong-gateway:latest ./docker
+          docker push us-central1-docker.pkg.dev/mythic-brook-454917-k6
+/kong-repo/kong-gateway:latest
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Apply
+        run: terraform apply -var="project_id=mythic-brook-454917-k6
+" -auto-approve
